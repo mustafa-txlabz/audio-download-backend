@@ -4,13 +4,6 @@
     "node": "24",
     "python": "3.11"
   },
-  "steps": {
-    "install-ytdlp": {
-      "commands": [
-        "python -m pip install yt-dlp"
-      ]
-    }
-  },
   "deploy": {
     "aptPackages": ["ffmpeg"],
     "startCommand": "npm start"

@@ -72,8 +72,8 @@ function getVideoInfo(url) {
       '--js-runtimes', 'node',
       url.trim()
     ];
-
-    const child = spawn('python', args);
+    const pythonCommand = process.env.PYTHON_PATH || 'python';
+    const child = spawn(pythonCommand, args);
 
     let stdout = '';
     let stderr = '';
@@ -183,7 +183,8 @@ function downloadAudio({ url, format = 'mp3', quality = '320' }) {
 
       console.log(`[Audio Engine] Starting conversion for "${videoInfo.title}" [${targetFormat}, ${quality}]...`);
 
-      const child = spawn('python', args);
+      const pythonCommand = process.env.PYTHON_PATH || 'python';
+      const child = spawn(pythonCommand, args);
 
       let stderr = '';
 

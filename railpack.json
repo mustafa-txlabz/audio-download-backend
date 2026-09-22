@@ -1,5 +1,6 @@
 {
   "$schema": "https://schema.railpack.com",
+  "provider": "node",
   "packages": {
     "node": "24",
     "python": "3.11"
